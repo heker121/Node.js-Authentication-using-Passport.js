@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<% if(!user){ %>
+<form action="/login" method="POST">
+  <input type="text" name="username" placeholder="Name">
+  <input type="text" name="password" placeholder="Password">
+  <button>Submit</button>
+</form>
+
+
+<li><a href="/register">Register</a></li>
+<li><a href="/login">Login</a></li>
+<% } else { %>
+<li> You are logged in as
+  <%= user.username %>
+</li>
+<li><a href="/logout">Log out</a></li>
+<% } %>
